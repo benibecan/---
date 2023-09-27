@@ -46,41 +46,25 @@ $(document).ready(function () {
     });
 });
 
-// works html연결
+// works 새창 연결
 $(function () {
     $('.aesop').click(function () {
-        url = '/web-portfolio/kimjiwon-portfolio/aesop.html';
+        url = '/aesop.html';
         window.open(url);
     });
     $('.djcentum').click(function () {
-        url = '/web-portfolio/kimjiwon-portfolio/djcentum.html';
+        url = '/djcentum.html';
         window.open(url);
     });
     $('.pohang').click(function () {
-        url = '/web-portfolio/kimjiwon-portfolio/pohang.html';
+        url = '/pohang.html';
         window.open(url);
     });
     $('.samyang').click(function () {
-        url = '/web-portfolio/kimjiwon-portfolio/samyang.html';
+        url = '/samyang.html';
         window.open(url);
     });
 });
-
-// // works 새창 연결
-// $(function () {
-//     $('.aesop').click(function () {
-//         url = '/web-portfolio/0810-aesop-redesign/main.html';
-//         window.open(url);
-//     });
-//     $('.djcentum').click(function () {
-//         url = '/web-portfolio/0824-djcentum/index.html';
-//         window.open(url);
-//     });
-//     $('.samyang').click(function () {
-//         url = '/web-portfolio/0822-samyangfood-redesign/index.html';
-//         window.open(url);
-//     });
-// });
 
 // aboutem 똑똑 호버 말풍선
 $(document).ready(function () {
