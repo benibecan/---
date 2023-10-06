@@ -189,6 +189,24 @@
                 },
             });
             //스크롤 스크립트
+            // $(function () {
+            //     let el = $('.scroll');
+            //     $(el).each(function (index) {
+            //         $(this).on('mousewheel', function () {
+            //             console.log(event.wheelDelta);
+            //             let moveTop = $(window).scrollTop();
+            //             let eleseclector = $(el).eq(index);
+            //             if (event.wheelDelta < 0) {
+            //                 moveTop = $(eleseclector).next().offset().top;
+            //             }
+
+            //             $('html,body')
+            //                 .stop()
+            //                 .animate({ scrollTop: moveTop + 'px' }, 1000);
+            //         });
+            //     });
+            // });
+            // 스크롤 1006추가
             $(function () {
                 let el = $('.scroll');
                 $(el).each(function (index) {
@@ -197,12 +215,21 @@
                         let moveTop = $(window).scrollTop();
                         let eleseclector = $(el).eq(index);
                         if (event.wheelDelta < 0) {
-                            moveTop = $(eleseclector).next().offset().top;
+                            if ($(eleseclector).next() !== undefined) {
+                                try {
+                                    moveTop = $(eleseclector).next().offset().top;
+                                } catch (e) {}
+                            }
+                        } else {
+                            if ($(eleseclector).prev() !== undefined) {
+                                try {
+                                    moveTop = $(eleseclector).prev().offset().top;
+                                } catch (e) {}
+                            }
                         }
-
-                        $('html,body')
+                        $('html, body')
                             .stop()
-                            .animate({ scrollTop: moveTop + 'px' }, 1000);
+                            .animate({ scrollTop: moveTop + 'px' }, 500);
                     });
                 });
             });
