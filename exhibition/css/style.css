@@ -1,0 +1,569 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+
+::selection {
+  background: #000;
+  color: #fff;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  letter-spacing: -0.05rem;
+  font-family: "Pretendard", "Montserrat", "Montagu Slab", "나눔고딕", sans-serif;
+  font-weight: 400;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 24;
+  cursor: pointer;
+}
+
+#wrap {
+  width: 100%; /* %는 가변형*/
+  max-width: 1920px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+#wrap .side {
+  width: 20px; /*가로값 px로 주면 고정*/
+  height: 100%;
+}
+#wrap #container {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 20px); /*가로값 %면 가변*/
+  height: calc(100% - 50px);
+}
+#wrap #container header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+#wrap #container header .logo {
+  position: relative;
+  height: 70px;
+}
+#wrap #container header .logo img {
+  height: 32px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+#wrap #container header #cclick {
+  cursor: pointer;
+  position: relative;
+  height: 70px;
+}
+#wrap #container header #cclick .icon {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  position: relative;
+  width: 130px;
+  height: 32px;
+  background: #000;
+  border-radius: 20px;
+  color: #fff;
+  border: transparent;
+}
+#wrap #container header #cclick .icon > .cbtn {
+  font-family: "Patihan";
+  font-weight: 500;
+  line-height: 34px;
+  padding-left: 20px;
+  letter-spacing: 0.3px;
+  color: #fff;
+}
+#wrap #container header #cclick .icon > span {
+  position: absolute;
+  font-size: 18px;
+  z-index: 999;
+  top: 0;
+  left: 24px;
+  line-height: 30px;
+  color: #fff;
+}
+#wrap #container .main {
+  height: 100%;
+  width: 100%;
+}
+#wrap #container .main > div > section {
+  border-radius: 20px;
+}
+#wrap #container .main .top {
+  height: 60%;
+  width: 100%;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+#wrap #container .main .top:hover .text {
+  color: #fff;
+}
+#wrap #container .main .top:hover section::after {
+  transform: translateY(0%);
+}
+#wrap #container .main .top > section {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/photo9.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+#wrap #container .main .top > section::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(20, 20, 20, 0) 10%, rgba(20, 20, 20, 0.25) 25%, rgba(20, 20, 20, 0.5) 50%, rgba(20, 20, 20, 0.75) 75%, rgb(20, 20, 20) 100%);
+  transform: translateY(100%);
+  transition: 0.5s;
+}
+#wrap #container .main .top > section .text {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  z-index: 1;
+}
+#wrap #container .main .top > section .text > h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+#wrap #container .main .top > section .text > p {
+  font-size: 16px;
+}
+#wrap #container .main .bottom {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  box-sizing: border-box;
+}
+#wrap #container .main .bottom > section {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-width: 300px;
+  flex-basis: 20%;
+  flex-grow: 1;
+  overflow: hidden;
+}
+#wrap #container .main .bottom > section:hover img {
+  transform: scale(1.3);
+  filter: brightness(0.5);
+}
+#wrap #container .main .bottom > section > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.5s;
+}
+#wrap #container .main .bottom > section .text {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  padding: 20px;
+}
+#wrap #container .main .bottom .num3 {
+  background: bisque;
+}
+#wrap #container .main .bottom .num3 .text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  top: 0;
+  left: 0;
+  color: #000;
+}
+#wrap #container .main .bottom .num3 .text > div > p:first-child {
+  margin-bottom: 10px;
+}
+#wrap #container .main .bottom .num3 .text > button {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  border: 5px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+}
+#wrap div.footer {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  text-align: center;
+  line-height: 30px;
+  color: #000;
+  font-size: 12px;
+}
+
+/*calendar*/
+#calendar {
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+  font-family: "Lato", sans-serif;
+}
+
+#calendar_weekdays div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#calendar_content,
+#calendar_weekdays,
+#calendar_header {
+  position: relative;
+  width: 320px;
+  overflow: hidden;
+  float: left;
+  z-index: 10;
+}
+
+#calendar_weekdays div,
+#calendar_content div {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #ffffff;
+  color: #787878;
+}
+
+#calendar_content {
+  border-radius: 0px 0px 12px 12px;
+}
+
+#calendar_content div {
+  float: left;
+}
+
+#calendar_content div:hover {
+  background-color: #f8f8f8;
+}
+
+#calendar_content div.blank {
+  background-color: #e8e8e8;
+}
+
+#calendar_header,
+#calendar_content div.today {
+  zoom: 1;
+  filter: alpha(opacity=70);
+  opacity: 1;
+}
+
+#calendar_content div.today {
+  color: #ffffff;
+}
+
+#calendar_header {
+  position: relative;
+  width: 100%;
+  height: 37px;
+  text-align: center;
+  background-color: #111;
+  padding: 18px 0;
+  border-radius: 12px 12px 0px 0px;
+}
+#calendar_header .material-symbols-outlined {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#calendar_header .material-symbols-outlined:first-of-type {
+  left: 0;
+}
+#calendar_header .material-symbols-outlined:nth-of-type(2) {
+  right: 0;
+}
+
+#calendar_header h1 {
+  display: inline-block;
+  font-size: 1.5em;
+  color: #ffffff;
+  width: 70%;
+}
+
+i[class^=icon-chevron] {
+  color: #ffffff;
+  float: left;
+  width: 15%;
+  border-radius: 50%;
+}
+
+.shadow {
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/*sub*/
+.maininner {
+  width: 100%;
+  height: auto;
+  border-top: 1px solid #ccc;
+  padding-top: 40px;
+}
+.maininner .toptext .title {
+  margin-bottom: 10px;
+}
+.maininner .toptext p {
+  position: relative;
+  color: #787878;
+}
+.maininner .toptext p::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background: #787878;
+}
+.maininner .toptext p:nth-of-type(1) {
+  position: relative;
+  float: left;
+  margin-right: 20px;
+}
+.maininner .topphoto {
+  width: 100%;
+  height: 600px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.maininner .topphoto img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transform: scale(1.5);
+}
+.maininner .caption {
+  width: 100%;
+  height: auto;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.maininner .caption .caption-left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 300px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+.maininner .caption .caption-left > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+.maininner .caption .caption-left > div h1 {
+  position: relative;
+  line-height: 1;
+  font-family: "Empirica";
+  font-weight: 300;
+}
+.maininner .caption .caption-left > div h1::before, .maininner .caption .caption-left > div h1::after {
+  font-size: 48px;
+}
+.maininner .caption .caption-left > div h1::before {
+  content: "“";
+}
+.maininner .caption .caption-left > div h1::after {
+  position: absolute;
+  content: "”";
+}
+.maininner .caption .caption-left > div p {
+  color: #787878;
+  margin-top: 40px;
+}
+.maininner .caption .caption-right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+.maininner .caption .caption-right ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 300px;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+.maininner .caption .caption-right ul li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.maininner .caption .caption-right ul li:not(:last-child):after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  bottom: -10px;
+  left: 0;
+  background: #ccc;
+}
+.maininner .caption .caption-right ul li p {
+  padding: 0 5px;
+}
+.maininner .caption .caption-right .buttonwrap {
+  text-align: center;
+}
+.maininner .caption .caption-right .buttonwrap button {
+  display: inline-block;
+  width: 80%;
+  height: 70px;
+  border: none;
+  background: #222;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.maininner .caption .caption-right .buttonwrap button:hover {
+  background: #000;
+}
+.maininner .maintext {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 80px 0;
+}
+
+.text span {
+  display: block;
+  letter-spacing: 0.3px;
+  line-height: 1.7;
+  color: #787878;
+}
+.text span:nth-child(1) {
+  margin-bottom: 20px;
+}
+
+.footer2 {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #000;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.chapter1 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.chapter1 .photo {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.chapter1 .photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 40%;
+     object-position: 50% 40%;
+}
+.chapter1 .text {
+  margin-bottom: 120px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+.chapter1 .text span {
+  flex-basis: 48%;
+  width: 100%;
+  margin: 0;
+}
+.chapter1 .text span strong {
+  font-size: 28px;
+}
+
+/*스마트폰 세로*/
+/*스마트폰 가로*/
+/*태블릿 세로*/
+@media screen and (max-width: 768px) {
+  .caption {
+    flex-direction: column;
+  }
+  .caption-right {
+    margin: 40px auto;
+  }
+  .chapter1 .text {
+    flex-direction: column;
+  }
+}
+/*태블릿 가로, 데스크 톱*/

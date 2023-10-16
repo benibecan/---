@@ -49,19 +49,31 @@ $(document).ready(function () {
 // works 새창 연결
 $(function () {
     $('.aesop').click(function () {
-        url = '/aesop.html';
+        url = 'aesop.html';
         window.open(url);
     });
     $('.djcentum').click(function () {
-        url = '/djcentum.html';
+        url = 'djcentum.html';
         window.open(url);
     });
     $('.pohang').click(function () {
-        url = '/pohang.html';
+        url = 'pohang.html';
         window.open(url);
     });
     $('.samyang').click(function () {
-        url = '/samyang.html';
+        url = 'samyang.html';
+        window.open(url);
+    });
+    $('.exhibition').click(function () {
+        url = 'exhibition.html';
+        window.open(url);
+    });
+    $('.happybath').click(function () {
+        url = 'happybath.html';
+        window.open(url);
+    });
+    $('.paulsmith').click(function () {
+        url = 'paulsmith.html';
         window.open(url);
     });
 });
